@@ -27,180 +27,11 @@
         </div>
         <!-- Развлечение/Проживание/Еда/Музеи -->
         <div id="themes" class="space-y-10">
-            <!-- Тема -->
-            <div class="md:grid grid-cols-4 gap-4">
-                <div class="flex flex-col">
-                    <!-- Название темы -->
-                    <div class="px-6 text-2xl font-semibold mb-4">Развлечения</div>
-                    <!-- Описание темы -->
-                    <div class="px-6 font-serif text-lg font-light mb-8 md:mb-0">
-                        Места, которые необходимо увидеть,
-                        маршруты,
-                        которыми стоит пройти, и фирменные
-                        развлечения.
-                    </div>
-                </div>
-
-                <!-- Места -->
-                <div class="md:col-span-3 mx-6 min-h-[200px] md:min-h-full md:h-full relative">
-                    <!-- Slider main container -->
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <a href="#" class="swiper-slide bg-white hover:opacity-80 hover:underline">
-                                <div class="flex justify-center items-center">
-                                    <img class=""
-                                         src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/96/a5/08/caption.jpg?w=400&h=300&s=1">
-                                </div>
-                                <div class="mt-2 text-lg font-semibold ">
-                                    Александровский сад
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide bg-white hover:opacity-80 hover:underline">
-                                <div class="flex justify-center items-center">
-                                    <img class=""
-                                         src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/96/a5/08/caption.jpg?w=400&h=300&s=1">
-                                </div>
-                                <div class="mt-2 text-lg font-semibold ">
-                                    Александровский сад
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide bg-white hover:opacity-80 hover:underline">
-                                <div class="flex justify-center items-center">
-                                    <img class=""
-                                         src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/96/a5/08/caption.jpg?w=400&h=300&s=1">
-                                </div>
-                                <div class="mt-2 text-lg font-semibold ">
-                                    Александровский сад
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide bg-white hover:opacity-80 hover:underline">
-                                <div class="flex justify-center items-center">
-                                    <img class=""
-                                         src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/96/a5/08/caption.jpg?w=400&h=300&s=1">
-                                </div>
-                                <div class="mt-2 text-lg font-semibold ">
-                                    Александровский сад
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide bg-white hover:opacity-80 hover:underline">
-                                <div class="flex justify-center items-center">
-                                    <img class=""
-                                         src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/96/a5/08/caption.jpg?w=400&h=300&s=1">
-                                </div>
-                                <div class="mt-2 text-lg font-semibold ">
-                                    Александровский сад
-                                </div>
-                            </a>
-                        </div>
-                        <!-- If we need pagination -->
-                        <!-- <div class="swiper-pagination"></div> -->
-
-                        <!-- If we need navigation buttons -->
-                        <div class="back1 absolute top-[38%] left-2 z-20 flex justify-between items-center">
-                            <div
-                                    class=" w-10 h-10 rounded-full text-xl flex justify-center items-center bg-white border-2 border-black  hover:bg-black hover:fill-white">
-                                <svg viewBox="0 0 24 24" width="24px" height="24px">
-                                    <path
-                                            d="M10.304 3.506l-8.048 8.047a.644.644 0 000 .895l8.048 8.047a.624.624 0 00.883 0l.882-.883a.624.624 0 000-.883l-5.481-5.48h14.714a.625.625 0 00.623-.625v-1.248a.624.624 0 00-.623-.624H6.588l5.481-5.481a.624.624 0 000-.883l-.882-.883a.623.623 0 00-.883-.004c-.001.002-.002.003 0 .005z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div class="next1 absolute top-[38%] right-2 z-20 flex justify-between items-center">
-                            <div
-                                    class=" w-10 h-10 rounded-full text-xl flex justify-center items-center bg-white border-2 border-black  hover:bg-black hover:fill-white">
-                                <svg viewBox="0 0 24 24" width="24px" height="24px">
-                                    <path
-                                            d="M13.696 3.502a.624.624 0 00-.884.004l-.882.883a.624.624 0 000 .883l5.481 5.481H2.698a.624.624 0 00-.623.624v1.248c0 .346.279.623.623.625h14.714l-5.481 5.48a.624.624 0 000 .883l.882.883c.245.244.64.244.883 0l8.049-8.047a.646.646 0 000-.895l-8.049-8.048v-.004z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-
-
-                        <!-- If we need scrollbar -->
-                        <!-- <div class="swiper-scrollbar"></div> -->
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </div>
 <script type="module">
-    const mock = {
-        "cities": [
-            {
-                "id": 1,
-                "name": "Киров",
-                "themes": [
-                    {
-                        "places": [
-                            {
-                                "image": "https://dymkatoys.ru/wp-content/uploads/vhod-v-zdanie-promysla-1.jpg",
-                                "name": "Музей дымковской игрушки",
-                                "url": "https://dymkatoys.ru/muzej/"
-                            },
-                            {
-                                "image": "https://suminia.com/wp-content/uploads/2022/10/img-20221005-wa0012-870x400.jpg",
-                                "name": "Вятский палеонтологический музей",
-                                "url": "https://suminia.com/"
-                            },
-                            {
-                                "image": "https://dymkatoys.ru/wp-content/uploads/vhod-v-zdanie-promysla-1.jpg",
-                                "name": "Музей дымковской игрушки",
-                                "url": "https://dymkatoys.ru/muzej/"
-                            },
-                            {
-                                "image": "https://suminia.com/wp-content/uploads/2022/10/img-20221005-wa0012-870x400.jpg",
-                                "name": "Вятский палеонтологический музей",
-                                "url": "https://suminia.com/"
-                            }
-                        ],
-                        "themeDescription": "какое-то описание для музеев",
-                        "themeName": "Музеи"
-                    },
-                    {
-                        "places": [
-                            {
-                                "image": "https://dymkatoys.ru/wp-content/uploads/vhod-v-zdanie-promysla-1.jpg",
-                                "name": "Музей дымковской игрушки",
-                                "url": "https://dymkatoys.ru/muzej/"
-                            },
-                            {
-                                "image": "https://suminia.com/wp-content/uploads/2022/10/img-20221005-wa0012-870x400.jpg",
-                                "name": "Вятский палеонтологический музей",
-                                "url": "https://suminia.com/"
-                            },
-                            {
-                                "image": "https://dymkatoys.ru/wp-content/uploads/vhod-v-zdanie-promysla-1.jpg",
-                                "name": "Музей дымковской игрушки",
-                                "url": "https://dymkatoys.ru/muzej/"
-                            },
-                            {
-                                "image": "https://suminia.com/wp-content/uploads/2022/10/img-20221005-wa0012-870x400.jpg",
-                                "name": "Вятский палеонтологический музей",
-                                "url": "https://suminia.com/"
-                            }
-                        ],
-                        "themeDescription": "какое-то описание для музеев",
-                        "themeName": "Музеи"
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "name": "Омутниинск"
-            },
-            {
-                "id": 3,
-                "name": "Котельнич"
-            }
-        ]
-    }
-
     // import { } from 'https://www.gstatic.com/firebasejs/9.13.0/firebase-SERVICE.js'
     // https://firebase.google.com/docs/web/setup#available-libraries
     // Import the functions you need from the SDKs you need
@@ -310,7 +141,7 @@
                     </div>
                 </div>
                 <!-- Места -->
-                    <div class="md:col-span-3 mx-6 min-h-[200px] md:min-h-full md:h-full relative">
+                    <div class="md:col-span-3 mx-6 min-h-[200px] md:h-full relative">
                     <div class="swiper swiper-${city.id}-${index}">
                         <div class="swiper-wrapper">
                             ${renderPlaces(theme.places, index)}
