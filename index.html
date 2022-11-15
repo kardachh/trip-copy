@@ -27,7 +27,7 @@
         </div>
         <!-- Развлечение/Проживание/Еда/Музеи -->
         <div id="themes" class="space-y-10">
-            
+
         </div>
     </div>
 </div>
@@ -111,8 +111,9 @@
         const renderPlace = (place) => {
             return `<a href="${place.url}" class="swiper-slide bg-white hover:opacity-80 hover:underline">
                         <div class="flex justify-center items-center">
-                            <img class=""
-                                 src="${place.image}">
+                            <img class="h-full lg:h-[225px] lg:w-full"
+                                 src="${place.image}"
+                            >
                         </div>
                         <div class="mt-2 text-lg font-semibold ">
                             ${place.name}
