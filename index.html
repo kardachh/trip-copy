@@ -111,11 +111,11 @@
         const renderPlace = (place) => {
             return `<a href="${place.url}" class="swiper-slide bg-white hover:opacity-80 hover:underline">
                         <div class="flex justify-center items-center">
-                            <img class="h-[225px] lg:w-full"
+                            <img class="h-[200px] md:h-[175px] lg:h-[225px] lg:w-full"
                                  src="${place.image}"
                             >
                         </div>
-                        <div class="mt-2 text-lg font-semibold ">
+                        <div class="mt-2 text-lg font-semibold text-center md:text-start">
                             ${place.name}
                         </div>
                     </a>`
