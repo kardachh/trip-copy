@@ -13,10 +13,13 @@
     <title>Document</title>
   </head>
 
-  <body class="min-w-[320px]">
-    <div class="mx-auto max-w-screen-xl ">
+  <body class="min-w-[320px] text-white bg-[#121212]">
+    <div class="mx-auto max-w-screen-xl">
       <div class="text-[32px] md:text-[54px] font-semibold px-6">
-        <span class="text-[#ff5d5d]">Откройте для себя направление</span>
+        <span class="text-purple-400"
+          >Путеводитель по туристическим местам</span
+        >
+        <br />
         <span class="cityName">Киров</span>
       </div>
       <div class="my-4 md:px-6">
@@ -25,30 +28,32 @@
           class="scrollbar-hide flex flex-wrap md:flex-nowrap space-x-2 md:space-x-4 overflow-auto px-6 md:px-0"
         ></div>
       </div>
-      <div class="mb-20">
-        <div class="px-6 text-[28px] font-semibold mb-6">
+      <div class="mt-10 mb-20">
+        <!-- <div class="px-6 text-[28px] font-semibold mb-6">
           <span class="cityName">Киров</span><span>:</span>
           <span>самое интересное</span>
-        </div>
+        </div> -->
         <!-- Развлечение/Проживание/Еда/Музеи -->
         <div id="themes" class="space-y-10"></div>
       </div>
     </div>
-    <div class="bg-[#66b769] w-full py-8 text-white" id="contacts">
-      <div
-        class="flex flex-col container mx-auto items-center text-xl lg:text-2xl"
-      >
-        <div class="text-2xl lg:text-4xl font-bold">Контакты</div>
-        <div
-          class="flex flex-col lg:flex-row justify-between items-center w-full my-5 lg:mt-[30px] lg:mb-[30px]"
-        >
-          <a href="" class="flex-1 text-center">WhatsApp</a>
-          <a href="" class="flex-1 text-center">+7 (123) 456-78-90</a>
-          <a href="" class="flex-1 text-center">Telegram</a>
-        </div>
-      </div>
-      <div class="max-w-[1040px] h-[250px] lg:h-[450px] mx-auto px-3 lg:px-0">
-        <iframe
+    <div class="w-full py-8 text-white" id="contacts">
+      <!--  -->
+      <div class="max-w-screen-xl px-6 mx-auto flex flex-col md:flex-row justify-between">
+        <ul class="text-base space-y-3 leading-5 md:text-xl font-medium mb-5">
+          <li class="flex">
+            <a href="" class="flex-1">+7 (123) 456-78-90</a>
+          </li>
+          <li class="flex">
+            <a href="" class="flex-1">WhatsApp</a>
+          </li>
+          <li class="flex">
+            <a href="" class="flex-1">Telegram</a>
+          </li>
+        </ul>
+        <div class="w-full md:w-3/4 h-[300px]">
+          <iframe
+          style="filter: invert(90%)"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2079.
             6730927738786!2d49.68156385170467!3d58.584195177491125!2m3!1f0!2f0!3f0!3
             m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43fcf423b6d4d3fb%3A0xe4b5f6169b2bbc1a!
@@ -61,13 +66,15 @@
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+        </div>
       </div>
+      <!--  -->
     </div>
     <script type="module">
       import Swiper from "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js";
 
-    //   const API_URL = "http://localhost:5000/";
-    //   const API_URL = "https://trip-copy-back.herokuapp.com/";
+      //   const API_URL = "http://localhost:5000/";
+      //   const API_URL = "https://trip-copy-back.herokuapp.com/";
       const API_URL = "https://trip-copy-back.onrender.com/";
 
       let cities;
@@ -95,7 +102,9 @@
         cities.forEach((city, index) => {
           citiesEl.innerHTML += `
                 <div id="city-id-${city.id}"
-                    class="${index === 0 && 'ml-2'} text-[12px] md:text-base border border-black rounded-2xl my-2 py-2 md:py-3 px-3 md:px-4 bg-white text-black hover:bg-black hover:text-white cursor-pointer font-semibold whitespace-nowrap">
+                    class="${
+                      index === 0 && "ml-2"
+                    } transition ease-in-out delay-100 text-[12px] md:text-base border border-purple-400 rounded-2xl my-2 py-2 md:py-3 px-3 md:px-4 hover:bg-purple-400 cursor-pointer font-semibold whitespace-nowrap">
                     ${city.name}                                     
                 </div>
                 `;
@@ -118,9 +127,9 @@
         const themesEl = document.querySelector("#themes");
 
         const renderPlace = (place) => {
-          return `<a href="${place.url}" class="swiper-slide bg-white hover:opacity-80 hover:underline">
+          return `<a href="${place.url}" class="swiper-slide hover:opacity-80 hover:text-purple-400">
                         <div class="flex justify-center items-center">
-                            <img class="h-[200px] md:h-[175px] lg:h-[225px] lg:w-full"
+                            <img class="h-[200px] md:h-[175px] lg:h-[225px] lg:w-full rounded-xl"
                                  src="${place.image}"
                             >
                         </div>
@@ -162,7 +171,7 @@
                           city.id
                         }-${index} absolute top-[38%] left-2 z-20 flex justify-between items-center">
                             <div
-                                    class=" w-10 h-10 rounded-full text-xl flex justify-center items-center bg-white border-2 border-black  hover:bg-black hover:fill-white">
+                                    class=" w-10 h-10 rounded-full text-xl flex justify-center items-center border-2 border-purple-400 hover:bg-purple-400 fill-white hover:fill-white">
                                 <svg viewBox="0 0 24 24" width="24px" height="24px">
                                     <path
                                             d="M10.304 3.506l-8.048 8.047a.644.644 0 000 .895l8.048 8.047a.624.624 0 00.883 0l.882-.883a.624.624 0 000-.883l-5.481-5.48h14.714a.625.625 0 00.623-.625v-1.248a.624.624 0 00-.623-.624H6.588l5.481-5.481a.624.624 0 000-.883l-.882-.883a.623.623 0 00-.883-.004c-.001.002-.002.003 0 .005z">
@@ -174,7 +183,7 @@
                           city.id
                         }-${index} absolute top-[38%] right-2 z-20 flex justify-between items-center">
                             <div
-                                    class=" w-10 h-10 rounded-full text-xl flex justify-center items-center bg-white border-2 border-black  hover:bg-black hover:fill-white">
+                                    class=" w-10 h-10 rounded-full text-xl flex justify-center items-center border-2 border-purple-400  hover:bg-purple-400 fill-white hover:fill-white">
                                 <svg viewBox="0 0 24 24" width="24px" height="24px">
                                     <path
                                             d="M13.696 3.502a.624.624 0 00-.884.004l-.882.883a.624.624 0 000 .883l5.481 5.481H2.698a.624.624 0 00-.623.624v1.248c0 .346.279.623.623.625h14.714l-5.481 5.48a.624.624 0 000 .883l.882.883c.245.244.64.244.883 0l8.049-8.047a.646.646 0 000-.895l-8.049-8.048v-.004z">
@@ -213,7 +222,7 @@
       };
 
       readDataFromFirebase().then((res) => {
-        console.log(res)
+        console.log(res);
         cities = res.cities;
         selectedCityId = cities[0].id;
         renderCitiesLine(cities);
